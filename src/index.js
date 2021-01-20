@@ -1,4 +1,2 @@
-import personage from './js/Personage';
-import functionForPersonage from './js/functionForPers';
+import set from './js/Set';
 
-functionForPersonage(personage, ['name', 'level']);
