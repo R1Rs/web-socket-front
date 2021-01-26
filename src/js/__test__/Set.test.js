@@ -39,3 +39,68 @@ test('test toArray and from Team', () => {
   ];
   expect(members).toEqual(expected);
 });
+
+test('test-name', () => {
+  const team = new Team();
+
+  team.add({
+    name: 'Лучник',
+    type: 'Bowman',
+    health: 50,
+    level: 3,
+    attack: 40,
+    defence: 10,
+  });
+  const received = () => team.add({
+    name: 'Лучник',
+    type: 'Bowman',
+    health: 50,
+    level: 3,
+    attack: 40,
+    defence: 10,
+  });
+  const expected = 'такой персонаж уже есть в команде';
+
+  expect(received).toThrow(expected);
+});
+
+test('test-name with 1 bug in property', () => {
+  const team = new Team();
+
+  team.add({
+    name: 'Лучник',
+    type: 'Bowman',
+    health: 50,
+    level: 3,
+    attack: 40,
+    defence: 10,
+  });
+  team.add({
+    name: 'Лучник',
+    type: 'Bowman',
+    health: 50,
+    level: 3,
+    attack: 30,
+    defence: 10,
+  });
+  const received = team.toArray();
+  const expected = [
+    {
+      name: 'Лучник',
+      type: 'Bowman',
+      health: 50,
+      level: 3,
+      attack: 40,
+      defence: 10,
+    },
+    {
+      name: 'Лучник',
+      type: 'Bowman',
+      health: 50,
+      level: 3,
+      attack: 30,
+      defence: 10,
+    }];
+
+  expect(received).toThrow(expected);
+});
