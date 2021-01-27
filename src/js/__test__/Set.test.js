@@ -102,5 +102,5 @@ test('test-name with 1 bug in property', () => {
       defence: 10,
     }];
 
-  expect(received).toThrow(expected);
+  expect(received).toEqual(expected);
 });
