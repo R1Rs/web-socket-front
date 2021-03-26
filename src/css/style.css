@@ -36,8 +36,8 @@ html, body {
   background: url("/src/img/hammer.png");
   background-size: cover;
   position: absolute;
-  width: 100px;
-  height: 70px;
+  width: 50px;
+  height: 40px;
 }
 
 .bam {

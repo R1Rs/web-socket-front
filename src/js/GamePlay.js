@@ -54,8 +54,8 @@ export default class GamePlay {
         // if (cell.classList.contains("cell__active")) {
         const hammer = document.createElement("div");
         hammer.classList.add("cursor__active");
-        hammer.style.left = `${el.clientX - 100}px`;
-        hammer.style.top = `${el.clientY - 70}px`;
+        hammer.style.left = `${el.clientX - 50}px`;
+        hammer.style.top = `${el.clientY - 40}px`;
         cell.insertAdjacentElement("beforebegin", hammer);
       });
       cell.addEventListener("mouseout", () => {
