@@ -31,3 +31,32 @@ html, body {
     background: url("/src/img/goblin.png");
     background-size: contain;
 }
+
+.cursor__active {
+  background: url("/src/img/hammer.png");
+  background-size: cover;
+  position: absolute;
+  width: 100px;
+  height: 70px;
+}
+
+.bam {
+  background: url("/src/img/bam.jpg");
+  background-size: contain;
+}
+
+p {
+  font-size: medium;
+}
+
+.hits {
+  color: green;
+}
+
+.misses {
+  color: red;
+}
+
+body {
+  cursor: url("/src/img/mouse.png");
+}
