@@ -45,7 +45,7 @@ export default class GamePlay {
         cell.classList.remove("bam");
       });
       this.board.children[activePosition].classList.add("cell__active");
-    }, 5000);
+    }, 1000);
   }
 
   listenerCellMouseMoved() {
@@ -67,18 +67,18 @@ export default class GamePlay {
 
   listenerCellClick() {
     this.board.children.forEach((cell) => {
-      cell.addEventListener("click", (el) => {
+      cell.addEventListener("click", () => {
         if (cell.classList.contains("cell__active")) {
           cell.classList.remove("cell__active");
           cell.classList.add("bam");
-          let hits = document.querySelector(".hits");
+          const hits = document.querySelector(".hits");
           // eslint-disable-next-line no-plusplus
           hits.textContent++;
         } else {
-          let misses = document.querySelector(".misses");
+          const misses = document.querySelector(".misses");
           // eslint-disable-next-line no-plusplus
           misses.textContent++;
-          if (misses.textContent == 2) {
+          if (misses.textContent === "5") {
             alert("GAME OVER");
             new GamePlay().init(document.querySelector('.container'));
           }
