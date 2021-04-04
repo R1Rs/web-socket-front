@@ -1,5 +1,4 @@
-// eslint-disable-next-line import/no-named-as-default
-import GamePlay from './js/GamePlay';
-import './css/style.css';
+import "./css/style.css";
+import TopTasks from "./js/TopTasks";
 
-new GamePlay().init(document.querySelector('.container'));
+new TopTasks().taskActive();
