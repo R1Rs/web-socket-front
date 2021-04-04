@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 export default class Task {
   constructor() {
     this.task = null;
