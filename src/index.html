@@ -7,12 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <div data-widget="subscribe">
-      <form data-id="subscribe-form" action="http://localhost:7070/subscribe">
-        <input data-id="name" name="name" required>
-        <input data-id="phone" name="phone" required>
-        <button>Записаться</button>
-      </form>
-    </div>  
+  <div class="ticket__header">
+    <button class="ticket__button">
+      Добавить тикет
+    </button>
+  </div>
+  <div class="ticket__container">
+    <ul class="ticket__container-list">
+      <li class="ticket__container-list__item">
+        <div class="list__item">
+          <input class="item__radio" type="radio">
+          <span class="item__name">Поменять краску в принтере, ком. 404</span>
+          <span class="item__date">10.03.19 08^40</span>
+        </div>
+      </li>
+    </ul>
+  </div>
 </body>
 </html>
