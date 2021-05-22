@@ -7,16 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <button class="button">Click to toggle popover</button>
-        <div class="popover">
-            <div class="popover__title">
-                <span>Popover title</span>
-            </div>
-            <div class="popover__text">
-                <span>And here's some amazing content. It's very engaging. Right?</span>
-            </div>
-        </div>    
-    </div>
+    <div data-widget="subscribe">
+      <form data-id="subscribe-form" action="http://localhost:7070/subscribe">
+        <input data-id="name" name="name" required>
+        <input data-id="phone" name="phone" required>
+        <button>Записаться</button>
+      </form>
+    </div>  
 </body>
 </html>
