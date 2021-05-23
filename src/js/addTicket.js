@@ -9,12 +9,14 @@ export default class Ticket {
         buttonAddTicket.addEventListener("click", () => {
             this.ticket = document.createElement("form");
             this.ticket.innerHTML = `<span class="newTicket__header">Добавить тикет</span>
+                                   <span class="ticket__discription">Краткое описание</span> 
                                    <input class="input__discription" name="shortDiscription" type="text">
-                                   <input class="input__discription" name="fullDiscription" type="text">
+                                   <span class="ticket__discription">Подробное описание</span> 
+                                   <input class="input__discription-full" name="fullDiscription" type="text">
                                    <button class="button__ok">Ok</button>
                                    <button class="button__cancel">Отмена</button>`
             this.ticket.classList.add("ticket__new");
-            document.body.insertAdjacentElement("afterbegin", this.ticket);
+            document.querySelector(".container").insertAdjacentElement("afterbegin", this.ticket);
             this.sendTicket();
             this.cancelTicket();
         })
