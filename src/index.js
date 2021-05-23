@@ -1,3 +1,7 @@
+import "./css/style.css";
+import Ticket from "./js/addTicket";
+new Ticket();
+
 const subscribeWidget = document.querySelector("[data-widget=subscribe]");
 const subscribeForm = subscribeWidget.querySelector('[data-id=subscribe-form]');
 const nameInput = subscribeWidget.querySelector('[data-id=name]');
