@@ -1,6 +1,10 @@
 import "./css/style.css";
-import Ticket from "./js/api/Ticket";
-new Ticket();
+import Authorization from "./js/ui/Authorization";
+new Authorization(document.querySelector(".registration__window"));
+
+
+// import Ticket from "./js/api/Ticket";
+// new Ticket();
 
 
 // const url = "http://localhost:3000";
